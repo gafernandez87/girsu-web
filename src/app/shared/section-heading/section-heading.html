@@ -1,0 +1,6 @@
+<header class="section-heading" [class.section-heading--dark]="theme() === 'dark'">
+  <h2>{{ title() }}</h2>
+  @if (description()) {
+    <p class="section-heading__description">{{ description() }}</p>
+  }
+</header>

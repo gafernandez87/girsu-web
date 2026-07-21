@@ -1,0 +1,27 @@
+<article class="download-card" [class.download-card--compact]="compact()">
+  <!-- <div class="download-card__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" focusable="false">
+      <path d="M7 2h7l5 5v15H7z" />
+      <path d="M14 2v6h5M9.5 14.5h5M12 12v5" />
+    </svg>
+  </div> -->
+  <div class="download-card__content">
+    <h3>{{ item().title }} ({{ item().format }})</h3>
+    <p>{{ item().description }}</p>
+  </div>
+  <!-- @if (item().href) { -->
+    <a
+      class="download-card__action"
+      [href]="item().href"
+      target="_blank"
+      rel="noopener noreferrer"
+      [attr.aria-label]="'Descargar ' + item().title"
+    >
+      <span aria-hidden="true">↓</span>
+    </a>
+  <!-- } @else {
+    <span class="download-card__pending" title="Archivo pendiente" aria-label="Archivo pendiente"
+      >—</span
+    >
+  } -->
+</article>

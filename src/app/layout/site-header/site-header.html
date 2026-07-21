@@ -1,0 +1,39 @@
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a
+      class="brand"
+      routerLink="/"
+      aria-label="GIRSUMANIA Educación Ambiental, ir al inicio"
+      (click)="closeMenu()"
+    >
+      <span class="brand__mark" aria-hidden="true">
+        <span>G</span>
+      </span>
+      <span class="brand__copy">
+        <strong><span>GIRSU</span><span>MANIA</span></strong>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-controls="main-navigation"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span class="sr-only">Abrir o cerrar navegación</span>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav
+      id="main-navigation"
+      class="main-navigation"
+      [class.main-navigation--open]="menuOpen()"
+      aria-label="Navegación principal"
+    >
+      @for (item of navigation; track item.fragment) {
+        <a routerLink="/" [fragment]="item.fragment" (click)="closeMenu()">{{ item.label }}</a>
+      }
+    </nav>
+  </div>
+</header>

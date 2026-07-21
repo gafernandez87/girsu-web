@@ -1,0 +1,50 @@
+<section class="app-hero" aria-labelledby="app-title">
+  <div class="shell app-hero__grid">
+    <div>
+      <a class="back-link" routerLink="/" fragment="recursos"
+        ><span aria-hidden="true">←</span> Volver a recursos</a
+      >
+      <p class="eyebrow">Innovación digital</p>
+      <h1 id="app-title">La experiencia GIRSU, también en tu celular</h1>
+      <p class="app-hero__lead">
+        Una aplicación educativa para aprender sobre separación en origen a través de desafíos,
+        juegos y una experiencia diseñada para avanzar paso a paso.
+      </p>
+      <button class="button button--primary" type="button" disabled>
+        Descarga para Android · Próximamente
+      </button>
+    </div>
+
+    <div
+      class="phone-stage"
+      aria-label="Espacio reservado para el video demostrativo de la aplicación"
+    >
+      <div class="phone">
+        <div class="phone__speaker"></div>
+        <div class="phone__screen">
+          <div class="phone__leaf" aria-hidden="true">♻</div>
+          <strong>GIRSU</strong>
+          <span>Aprender · Jugar · Cuidar</span>
+          <button type="button" disabled aria-label="Video demostrativo pendiente">▶</button>
+        </div>
+      </div>
+      <span class="phone-stage__note">Aquí se integrará el screen recording</span>
+    </div>
+  </div>
+</section>
+
+<section class="app-features" aria-labelledby="features-title">
+  <div class="shell">
+    <p class="eyebrow">Cómo se aprende</p>
+    <h2 id="features-title">Cada interacción abre una nueva idea</h2>
+    <div class="feature-grid">
+      @for (feature of features; track feature.number) {
+        <article>
+          <span>{{ feature.number }}</span>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
