@@ -1,0 +1,45 @@
+.library-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 4rem;
+}
+
+.library-group {
+  background:
+    radial-gradient(circle at 100% 0, rgba(255, 213, 0, 0.12), transparent 7rem),
+    color-mix(in srgb, var(--color-paper) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-paper) 16%, transparent);
+  border-radius: 1.35rem 1.35rem 2.4rem 1.35rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+
+  > h3 {
+    color: var(--brand-yellow-bright);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: -0.045em;
+    margin: 0 0 2rem;
+    text-shadow:
+      0.055em 0 var(--color-ink),
+      -0.055em 0 var(--color-ink),
+      0 0.055em var(--color-ink),
+      0 -0.055em var(--color-ink);
+  }
+
+  app-download-card {
+    --color-ink: var(--color-paper);
+    --color-text-muted: rgba(255, 255, 255, 0.63);
+    --color-border: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.library-group__items {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (max-width: 64rem) {
+  .library-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,32 +1,16 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import {
-  LIBRARY_GROUPS,
-  PEDAGOGICAL_RESOURCES,
-  STRATEGY_DOWNLOADS,
-  VIDEOS,
-} from '../../core/data/site-content';
-import { DownloadCard } from '../../shared/download-card/download-card';
-import { SectionHeading } from '../../shared/section-heading/section-heading';
+import { HeroSection } from './components/hero-section/hero-section';
+import { LibrarySection } from './components/library-section/library-section';
+import { PresentationSection } from './components/presentation-section/presentation-section';
+import { ResourcesSection } from './components/resources-section/resources-section';
+import { StrategySection } from './components/strategy-section/strategy-section';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, DownloadCard, SectionHeading],
+  imports: [HeroSection, PresentationSection, StrategySection, ResourcesSection, LibrarySection],
   templateUrl: './home.html',
   styleUrl: './home.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Home {
-  protected readonly strategyDownloads = STRATEGY_DOWNLOADS;
-  protected readonly resources = PEDAGOGICAL_RESOURCES;
-  protected readonly libraryGroups = LIBRARY_GROUPS;
-  protected readonly videoGalleryExpanded = signal(false);
-  protected readonly visibleVideos = computed(() =>
-    this.videoGalleryExpanded() ? VIDEOS : VIDEOS.slice(0, 4),
-  );
-
-  protected toggleVideoGallery(): void {
-    this.videoGalleryExpanded.update((isExpanded) => !isExpanded);
-  }
-}
+export class Home {}

@@ -1,0 +1,53 @@
+<section
+  id="estrategia"
+  class="section section--mint anchor-section"
+  aria-labelledby="strategy-title"
+>
+  <div class="shell">
+    <app-section-heading
+      title="Una hoja de ruta común para todo Jujuy"
+      description="Diagnóstico, objetivos, acciones e indicadores reunidos en una política educativa ambiental con enfoque participativo."
+    />
+
+    <div class="strategy-layout">
+      <div class="strategy-story" id="strategy-title">
+        <div class="strategy-step">
+          <span>1</span>
+          <div>
+            <strong>Escuchar</strong>
+            <p>Talleres y diagnóstico en territorio.</p>
+          </div>
+        </div>
+        <div class="strategy-step">
+          <span>2</span>
+          <div>
+            <strong>Planificar</strong>
+            <p>Ejes, objetivos y acciones medibles.</p>
+          </div>
+        </div>
+        <div class="strategy-step">
+          <span>3</span>
+          <div>
+            <strong>Transformar</strong>
+            <p>Seguimiento, aprendizaje y mejora continua.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="strategy-downloads" aria-label="Documentos de la estrategia">
+        @for (download of strategyDownloads; track download.title) {
+          <app-download-card [item]="download" />
+        }
+      </div>
+    </div>
+
+    <aside class="workshops-callout">
+      <span class="workshops-callout__number">+ territorio</span>
+      <div>
+        <p class="eyebrow">Talleres participativos</p>
+        <h3>La estrategia se construyó cerca de las comunidades.</h3>
+      </div>
+      <p>Este espacio incorporará la crónica y la galería fotográfica del proceso.</p>
+    </aside>
+  </div>
+</section>

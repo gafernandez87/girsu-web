@@ -97,6 +97,45 @@ button:disabled {
   scroll-margin-top: 5rem;
 }
 
+.eyebrow {
+  color: var(--color-leaf-700);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+.section--paper {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(0, 41, 107, 0.035) 0 1px, transparent 1.2px),
+    var(--color-paper);
+  background-size:
+    18px 18px,
+    auto;
+}
+
+.section--mint {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(0, 41, 107, 0.035) 0 1px, transparent 1.2px),
+    linear-gradient(135deg, #e7f5e8, #f6f1df);
+  background-size:
+    18px 18px,
+    auto;
+}
+
+.section--dark {
+  background:
+    radial-gradient(circle at 80% 16%, rgba(255, 213, 0, 0.15), transparent 18rem),
+    radial-gradient(circle at 12% 80%, rgba(203, 14, 211, 0.16), transparent 18rem),
+    linear-gradient(135deg, var(--brand-blue-900), #071932 54%, var(--color-leaf-900));
+  color: var(--color-paper);
+}
+
 .button {
   align-items: center;
   border: 2px solid transparent;

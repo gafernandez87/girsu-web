@@ -1,0 +1,26 @@
+<section
+  id="biblioteca"
+  class="section section--dark anchor-section"
+  aria-labelledby="library-title"
+>
+  <div class="shell">
+    <app-section-heading
+      title="Documentos para consultar, enseñar y decidir"
+      description="Normativa y documentación técnica reunida en un único lugar de libre acceso."
+      theme="dark"
+    />
+
+    <div class="library-grid" id="library-title">
+      @for (group of libraryGroups; track group.title) {
+        <section class="library-group">
+          <h3>{{ group.title }}</h3>
+          <div class="library-group__items">
+            @for (item of group.items; track item.title) {
+              <app-download-card [item]="item" [compact]="true" />
+            }
+          </div>
+        </section>
+      }
+    </div>
+  </div>
+</section>

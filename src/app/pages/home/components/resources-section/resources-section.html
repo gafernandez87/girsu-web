@@ -1,0 +1,41 @@
+<section
+  id="recursos"
+  class="section section--paper anchor-section"
+  aria-labelledby="resources-title"
+>
+  <div class="shell">
+    <app-section-heading
+      title="Materiales para aprender haciendo"
+      description="Recursos pensados para docentes y estudiantes, organizados para encontrar rápido qué usar en cada contexto."
+    />
+
+    <div class="resource-grid" id="resources-title">
+      @for (resource of resources; track resource.title; let index = $index) {
+        <article class="resource-card" [class.resource-card--featured]="index === 3">
+          <div class="resource-card__visual">
+            <span class="resource-card__number" aria-hidden="true">0{{ index + 1 }}</span>
+            <span class="resource-card__category">{{ resource.eyebrow }}</span>
+          </div>
+          <div class="resource-card__body">
+            <h3>{{ resource.title }}</h3>
+            <p>{{ resource.description }}</p>
+            <ul aria-label="Categorías">
+              @for (tag of resource.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+            @if (resource.href) {
+              <a [routerLink]="resource.href"
+                >Conocer la aplicación <span aria-hidden="true">→</span></a
+              >
+            } @else {
+              <span class="resource-card__pending">Material próximamente</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+
+    <app-video-gallery />
+  </div>
+</section>

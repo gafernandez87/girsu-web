@@ -1,0 +1,124 @@
+.video-section {
+  border-top: 2px dashed color-mix(in srgb, var(--brand-blue-900) 22%, var(--color-border));
+  margin-top: clamp(5rem, 10vw, 8rem);
+  padding-top: 3.5rem;
+  text-align: center;
+}
+
+.video-section__heading {
+  align-items: end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  text-align: left;
+
+  h3 {
+    color: var(--brand-blue-900);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    letter-spacing: -0.06em;
+    margin: 0.5rem 0 0;
+  }
+
+  > p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 21rem;
+  }
+}
+
+.video-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.video-card {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  > div:last-child {
+    padding: 1rem 0.25rem;
+  }
+
+  span {
+    color: var(--color-text-muted);
+    font-size: 0.7rem;
+  }
+
+  h4 {
+    color: var(--brand-blue-900);
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    letter-spacing: -0.035em;
+    margin: 0.3rem 0 0;
+  }
+}
+
+.video-card__placeholder {
+  align-items: center;
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(255, 255, 255, 0.32), transparent 4rem),
+    linear-gradient(145deg, var(--brand-yellow), var(--brand-green-bright));
+  border: 0.22rem solid var(--color-paper);
+  border-radius: 1rem 1rem 1.8rem 1rem;
+  box-shadow: 0 0.42rem 0 var(--brand-blue-900);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-card__play {
+  align-items: center;
+  background: var(--color-paper);
+  border: 0.18rem solid var(--brand-blue-900);
+  border-radius: 50%;
+  color: var(--color-leaf-900) !important;
+  display: flex;
+  font-size: 0.8rem !important;
+  height: 3rem;
+  justify-content: center;
+  padding-left: 0.15rem;
+  width: 3rem;
+}
+
+.video-card__index {
+  bottom: 0.7rem;
+  color: var(--color-paper) !important;
+  font-family: var(--font-accent);
+  font-size: 2rem !important;
+  position: absolute;
+  right: 0.9rem;
+  text-shadow:
+    0.06em 0 var(--brand-blue-900),
+    -0.06em 0 var(--brand-blue-900),
+    0 0.06em var(--brand-blue-900),
+    0 -0.06em var(--brand-blue-900);
+}
+
+.video-section__toggle {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 64rem) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .video-section__heading {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 35rem) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
