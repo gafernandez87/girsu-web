@@ -9,7 +9,7 @@
     <h3>{{ item().title }} ({{ item().format }})</h3>
     <p>{{ item().description }}</p>
   </div>
-  <!-- @if (item().href) { -->
+  @if (item().href) {
     <a
       class="download-card__action"
       [href]="item().href"
@@ -19,9 +19,9 @@
     >
       <span aria-hidden="true">↓</span>
     </a>
-  <!-- } @else {
+  } @else {
     <span class="download-card__pending" title="Archivo pendiente" aria-label="Archivo pendiente"
       >—</span
     >
-  } -->
+  }
 </article>

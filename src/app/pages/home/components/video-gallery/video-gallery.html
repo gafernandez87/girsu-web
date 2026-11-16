@@ -8,15 +8,45 @@
   </div>
 
   <div id="video-gallery" class="video-grid">
-    @for (video of visibleVideos(); track video.title; let index = $index) {
+    @for (video of visibleVideos(); track video) {
       <article class="video-card">
-        <div class="video-card__placeholder">
-          <span class="video-card__play" aria-hidden="true">▶</span>
-          <span class="video-card__index">{{ index + 1 }}</span>
-        </div>
+        @if (video.youtubeUrl && video.thumbnailUrl) {
+          <a
+            class="video-card__thumbnail"
+            [href]="video.youtubeUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="'Ver ' + video.title + ' en YouTube (abre en otra pestaña)'"
+          >
+            <img
+              [src]="video.thumbnailUrl"
+              alt=""
+              width="480"
+              height="360"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        } @else {
+          <div class="video-card__placeholder">
+            <span class="video-card__play" aria-hidden="true">▶</span>
+          </div>
+        }
         <div>
           <span>{{ video.duration }}</span>
           <h4>{{ video.title }}</h4>
+          @if (video.youtubeUrl) {
+            <a
+              class="video-card__link"
+              [href]="video.youtubeUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              [attr.aria-label]="'Ver ' + video.title + ' en YouTube (abre en otra pestaña)'"
+              >Ver en YouTube ↗</a
+            >
+          } @else {
+            <p class="video-card__pending">Próximamente</p>
+          }
         </div>
       </article>
     }

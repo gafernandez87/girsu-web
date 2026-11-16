@@ -15,18 +15,9 @@ export const NAVIGATION: readonly NavigationItem[] = [
 
 export const STRATEGY_DOWNLOADS: readonly DownloadItem[] = [
   {
-    title: 'Estrategia provincial completa',
+    title:
+      'Estrategia Provincial de Educación Ambiental para la Gestión Integral de Residuos Sólidos Urbanos',
     description: 'Diagnóstico, objetivos, ejes, acciones, indicadores y mecanismos de monitoreo.',
-    format: 'PDF',
-  },
-  {
-    title: 'Resumen ejecutivo',
-    description: 'Síntesis de la estrategia y matriz consolidada de acciones.',
-    format: 'PDF',
-  },
-  {
-    title: 'Lineamientos generales',
-    description: 'Bases para el Centro Educativo de Economía Circular de Jujuy.',
     format: 'PDF',
   },
 ];
@@ -63,10 +54,68 @@ export const PEDAGOGICAL_RESOURCES: readonly ResourceItem[] = [
   },
 ];
 
-export const VIDEOS: readonly VideoItem[] = Array.from({ length: 14 }, (_, index) => ({
-  title: `Microspot educativo ${String(index + 1).padStart(2, '0')}`,
-  duration: 'Video breve',
-}));
+// Fuente: Feedback videos + productos, VIDEOS - Resumen, columnas G e I.
+export const VIDEOS: readonly VideoItem[] = [
+  {
+    title: 'Residuos: el problema y la solución',
+    duration: 'Video breve',
+  },
+  {
+    title: 'Lo que tirás, vuelve.',
+    duration: 'Video breve',
+  },
+  {
+    title: 'El verdadero “costo” de la basura',
+    duration: 'Video breve',
+  },
+  {
+    title: 'El camino de los residuos',
+    duration: 'Video breve',
+    youtubeUrl: 'https://youtu.be/oRxi7tpuX4E',
+  },
+  {
+    title: 'El camino de los residuos - Parte II',
+    duration: 'Video breve',
+  },
+  {
+    title: '♫La Regla de las 3 R ♫',
+    duration: 'Video breve',
+  },
+  {
+    title: 'Reciclaje en Acción: ¿A dónde va?',
+    duration: 'Video breve',
+  },
+  {
+    title: 'Del residuo a la tierra',
+    duration: 'Video breve',
+  },
+  {
+    title: 'Cadena de valor: Todos somos parte',
+    duration: 'Video breve',
+  },
+  {
+    title: 'Todo se transforma: Economía Circular',
+    duration: 'Video breve',
+  },
+  {
+    title: 'Experiencia de acción en cooperativas - Donde otros ven basura…',
+    duration: 'Video breve',
+  },
+  {
+    title: 'Centro Ambiental Jujuy: El Corazón del sistema',
+    duration: 'Video breve',
+  },
+  {
+    title: 'El cambio empieza en la escuela',
+    duration: 'Video breve',
+    youtubeUrl: 'https://youtu.be/-H0rtREZwFA',
+  },
+  {
+    title: 'El poder de la ciudadanía',
+    duration: 'Video breve',
+    youtubeUrl: 'https://youtu.be/WIeI0roXnIo',
+  },
+];
 
 export const LIBRARY_GROUPS: readonly LibraryGroup[] = [
   {

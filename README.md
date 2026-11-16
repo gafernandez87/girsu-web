@@ -11,7 +11,16 @@ Landing educativa desarrollada con Angular para presentar la estrategia provinci
 
 ## Insumos pendientes
 
-La interfaz usa textos y visuales provisionales hasta recibir el manual de marca, logos, textos finales, documentos descargables, portadas, fotografías, enlaces de YouTube y archivo Android.
+La interfaz conserva textos y visuales provisionales. Continúan pendientes los contenidos definitivos, documentos descargables, portadas, fotografías, enlaces de YouTube y archivo Android.
+
+## Ajustes de noviembre de 2026
+
+- Se retiraron el renglón de proyecto y las cifras del inicio, el rótulo «GIRSUMANIA en territorio» y las numeraciones de recursos y microspots.
+- La sección Estrategia conserva una sola tarjeta con su título completo. La descarga se habilitará cuando se incorpore el PDF definitivo en `STRATEGY_DOWNLOADS`.
+- Los 14 microspots incorporan los títulos de «VIDEOS - Resumen» (Feedback videos + productos). Tres tienen enlace de YouTube; los otros once quedan pendientes de enlace en `VIDEOS`.
+- El logo de `public/assets/brand/girsumania.png` reproduce la imagen incluida en el [documento de correcciones](https://docs.google.com/document/d/1E2By06AcrpQvjy85IQBF8QLNNq1SgYITxrX6rZBr0RU/edit). Puede reemplazarse por el original vectorial cuando esté disponible.
+- Los títulos usan Baloo alojada localmente, una de las alternativas indicadas en el documento. La fuente proviene de [Ek Type, versión 1.443](https://github.com/EkType/Baloo/releases/tag/1.443), con caracteres latinos y licencia conservada en `public/assets/fonts/OFL-Baloo.txt`.
+- Quedan para una etapa posterior la ilustración del inicio, el mapa de Argentina con Jujuy destacado, las portadas de recursos y el contenido y las fotografías de talleres.
 
 ## Comandos disponibles
 

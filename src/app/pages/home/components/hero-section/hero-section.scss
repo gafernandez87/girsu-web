@@ -9,8 +9,8 @@
     auto,
     18px 18px,
     auto;
-  height: calc(100svh - 5rem);
-  min-height: 38rem;
+  display: grid;
+  min-height: max(38rem, calc(100svh - 5rem));
   overflow: hidden;
   padding: clamp(2rem, 5vh, 4.25rem) 0;
   position: relative;
@@ -49,7 +49,6 @@
   display: grid;
   gap: clamp(2rem, 6vw, 6rem);
   grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.75fr);
-  height: 100%;
   position: relative;
   z-index: 1;
 }
@@ -58,9 +57,9 @@
   color: var(--brand-blue-900);
   font-family: var(--font-display);
   font-size: clamp(3.15rem, min(6.1vw, 10vh), 6.25rem);
-  letter-spacing: -0.08em;
-  line-height: 0.86;
-  margin: 1rem 0 0;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin: 0;
   max-width: 10ch;
   text-shadow: 0.035em 0.04em 0 color-mix(in srgb, var(--brand-yellow) 85%, transparent);
   text-wrap: balance;
@@ -95,30 +94,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.35rem;
-}
-
-.hero__facts {
-  display: flex;
-  gap: clamp(1.4rem, 3.5vw, 3rem);
-  margin: clamp(1.5rem, 3.5vh, 2.5rem) 0 0;
-
-  div {
-    max-width: 7.5rem;
-  }
-
-  dt {
-    color: var(--color-ink);
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 800;
-  }
-
-  dd {
-    color: var(--color-text-muted);
-    font-size: 0.7rem;
-    line-height: 1.4;
-    margin: 0.2rem 0 0;
-  }
 }
 
 .hero-visual {
@@ -262,13 +237,8 @@
     padding-block: 1.5rem;
   }
 
-  .hero .eyebrow {
-    font-size: 0.68rem;
-  }
-
   .hero h1 {
     font-size: clamp(3rem, min(5vw, 9.5vh), 5rem);
-    margin-top: 0.75rem;
   }
 
   .hero__lead {
@@ -282,14 +252,6 @@
     margin-top: 1rem;
   }
 
-  .hero__facts {
-    margin-top: 1.25rem;
-  }
-
-  .hero__facts dt {
-    font-size: 1.3rem;
-  }
-
   .hero-visual {
     max-width: min(24rem, 54vh);
   }
@@ -297,24 +259,15 @@
 
 @media (max-width: 48rem) {
   .hero {
-    height: auto;
     min-height: auto;
     padding-block: 4rem;
   }
 
   .hero__grid {
     grid-template-columns: 1fr;
-    height: auto;
   }
 
   .hero-visual {
     max-width: 24rem;
-  }
-}
-
-@media (max-width: 35rem) {
-  .hero__facts {
-    gap: 1rem;
-    justify-content: space-between;
   }
 }

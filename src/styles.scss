@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Baloo';
+  src: url('/assets/fonts/baloo-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --brand-green: #0b8f4d;
   --brand-green-bright: #0eaa5c;
@@ -22,7 +30,7 @@
   --color-text-muted: #5e6d64;
   --color-border: #ded7c8;
   --font-body: 'Poppins', 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
-  --font-brand: 'Grenadine MVB Blk', 'Cooper Black', 'Arial Black', 'Poppins', sans-serif;
+  --font-brand: 'Baloo', 'Cooper Black', 'Arial Black', sans-serif;
   --font-display: var(--font-brand);
   --font-accent: var(--font-brand);
   --shell-width: 76rem;
