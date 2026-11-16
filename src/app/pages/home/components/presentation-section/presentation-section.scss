@@ -85,77 +85,20 @@
 }
 
 .territory-card__map {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 0;
+  display: grid;
+  justify-items: center;
+  padding-block: 1.5rem;
   position: relative;
-
-  &::before,
-  &::after {
-    background: color-mix(in srgb, var(--brand-blue-900) 14%, transparent);
-    content: '';
-    pointer-events: none;
-    position: absolute;
-  }
-
-  &::before {
-    height: 1px;
-    width: min(14rem, 70%);
-  }
-
-  &::after {
-    height: min(9rem, 70%);
-    width: 1px;
-  }
-
-  strong {
-    color: var(--brand-blue-900);
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    letter-spacing: -0.04em;
-    line-height: 1;
-    margin-top: 0.75rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  > span:last-child {
-    color: var(--color-text-muted);
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    margin-top: 0.45rem;
-    position: relative;
-    text-transform: uppercase;
-    z-index: 1;
-  }
-}
-
-.territory-card__marker {
-  background: var(--brand-green);
-  border: 0.38rem solid var(--brand-yellow-bright);
-  border-radius: 50% 50% 50% 0;
-  box-shadow: 0 0.65rem 1.25rem rgba(0, 41, 107, 0.18);
-  display: block;
-  height: 2.4rem;
-  position: relative;
-  transform: rotate(-45deg);
-  width: 2.4rem;
   z-index: 1;
-}
 
-.territory-card__marker::after {
-  background: var(--color-paper);
-  border-radius: 50%;
-  content: '';
-  height: 0.48rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 0.48rem;
+  img {
+    display: block;
+    height: auto;
+    max-height: 28rem;
+    max-width: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
 }
 
 .territory-card__content {
