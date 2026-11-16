@@ -54,6 +54,10 @@
   --card-soft: #f0e6f7;
 }
 
+.resource-card--manual-fix img {
+  object-fit: scale-down !important;
+}
+
 .resource-card--featured {
   background:
     radial-gradient(circle at 92% 10%, rgba(255, 213, 0, 0.18), transparent 7rem),
@@ -76,40 +80,19 @@
 }
 
 .resource-card__visual {
-  align-items: flex-start;
-  background:
-    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.5), transparent 4.2rem),
-    linear-gradient(145deg, var(--card-soft), color-mix(in srgb, var(--card-accent) 22%, white));
-  color: var(--card-accent);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: var(--card-soft);
+  min-width: 0;
   overflow: hidden;
-  padding: clamp(1.25rem, 3vw, 2rem);
   position: relative;
-}
 
-.resource-card__visual::before {
-  border: 2px dashed color-mix(in srgb, currentColor 22%, transparent);
-  border-radius: 50%;
-  content: '';
-  height: 11rem;
-  left: -5.5rem;
-  position: absolute;
-  top: -5rem;
-  width: 11rem;
-}
-
-.resource-card__visual::after {
-  background-image: radial-gradient(currentColor 0.8px, transparent 0.8px);
-  background-size: 13px 13px;
-  bottom: 1rem;
-  content: '';
-  height: 5rem;
-  opacity: 0.16;
-  position: absolute;
-  right: -1rem;
-  width: 6rem;
+  img {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .resource-card__category {
@@ -121,7 +104,8 @@
   font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  margin-top: 1rem;
+  margin: 0 0 0.8rem;
+  align-self: flex-start;
   padding: 0.45rem 0.65rem;
   position: relative;
   text-transform: uppercase;
@@ -196,19 +180,15 @@
 
 @media (max-width: 35rem) {
   .resource-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
   }
 
-  .resource-card__visual {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 8rem;
-  }
+  .resource-card__body {
+    min-width: 0;
+    padding: 1rem;
 
-  .resource-card__category {
-    margin-top: 0;
-    max-width: 8rem;
-    text-align: right;
+    h3 {
+      font-size: 1.2rem;
+    }
   }
 }

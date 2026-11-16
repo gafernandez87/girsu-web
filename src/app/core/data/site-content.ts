@@ -26,6 +26,10 @@ export const PEDAGOGICAL_RESOURCES: readonly ResourceItem[] = [
   {
     eyebrow: 'Para el aula',
     title: 'Manual para docentes',
+    image: {
+      src: 'assets/resources/card-1.png',
+      alt: 'Jóvenes participando en una actividad de educación ambiental',
+    },
     description:
       'Fundamentos, estrategias pedagógicas, actividades y orientaciones para trabajar la GIRSU en el aula.',
     tags: ['Docentes', 'Todos los niveles'],
@@ -33,6 +37,10 @@ export const PEDAGOGICAL_RESOURCES: readonly ResourceItem[] = [
   {
     eyebrow: 'Uso cotidiano',
     title: 'Cartillas prácticas',
+    image: {
+      src: 'assets/resources/card-2.png',
+      alt: 'Grupo participando en una jornada de separación de residuos',
+    },
     description:
       'Fichas sintéticas, actividades listas para usar y recursos gráficos para acompañar cada clase.',
     tags: ['Actividades', 'Imprimible'],
@@ -40,6 +48,7 @@ export const PEDAGOGICAL_RESOURCES: readonly ResourceItem[] = [
   {
     eyebrow: 'Aprender jugando',
     title: 'Kits educativos',
+    image: { src: 'assets/resources/card-3.png', alt: 'Mi bitácora de residuos GIRSUMANÍA' },
     description:
       'Memotest, cuadernillos, origami, cómic, juego de rol e introducción a biomateriales.',
     tags: ['Inicial', 'Primario', 'Secundario'],
@@ -47,6 +56,10 @@ export const PEDAGOGICAL_RESOURCES: readonly ResourceItem[] = [
   {
     eyebrow: 'Innovación digital',
     title: 'Aplicación educativa',
+    image: {
+      src: 'assets/resources/card-4.png',
+      alt: 'Captura del juego Separación en origen de la aplicación educativa',
+    },
     description:
       'Desafíos interactivos, contenidos sobre separación en origen y un sistema de puntos y ranking.',
     tags: ['Android', 'Interactivo'],

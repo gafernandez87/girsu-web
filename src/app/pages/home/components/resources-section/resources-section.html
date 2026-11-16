@@ -11,11 +11,17 @@
 
     <div class="resource-grid" id="resources-title">
       @for (resource of resources; track resource.title; let index = $index) {
-        <article class="resource-card" [class.resource-card--featured]="index === 3">
+        <article class="resource-card" [class.resource-card--featured]="index === 3" [class.resource-card--manual-fix]="index === 2">
           <div class="resource-card__visual">
-            <span class="resource-card__category">{{ resource.eyebrow }}</span>
+            <img
+              [src]="resource.image.src"
+              [alt]="resource.image.alt"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div class="resource-card__body">
+            <span class="resource-card__category">{{ resource.eyebrow }}</span>
             <h3>{{ resource.title }}</h3>
             <p>{{ resource.description }}</p>
             <ul aria-label="Categorías">

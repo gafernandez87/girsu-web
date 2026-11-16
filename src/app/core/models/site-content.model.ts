@@ -11,6 +11,7 @@ export interface DownloadItem {
 }
 
 export interface ResourceItem {
+  readonly image: { readonly src: string; readonly alt: string };
   readonly eyebrow: string;
   readonly title: string;
   readonly description: string;
