@@ -29,3 +29,8 @@ export interface VideoItem {
   readonly duration: string;
   readonly youtubeUrl?: string;
 }
+
+export interface GalleryImage {
+  readonly src: string;
+  readonly alt: string;
+}

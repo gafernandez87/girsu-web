@@ -1,0 +1,54 @@
+@if (activeImage(); as image) {
+  <section
+    class="photo-slider"
+    [attr.aria-label]="label()"
+    aria-roledescription="carrusel"
+    (keydown)="onKeydown($event)"
+  >
+    <div
+      class="photo-slider__frame"
+      tabindex="0"
+      aria-label="Usá las flechas izquierda y derecha para cambiar de foto"
+      (pointerdown)="onPointerDown($event)"
+      (pointerup)="onPointerUp($event)"
+      (pointercancel)="cancelSwipe()"
+    >
+      <img [src]="image.src" [alt]="image.alt" loading="lazy" decoding="async" draggable="false" />
+    </div>
+    <div class="photo-slider__controls">
+      <button
+        type="button"
+        class="photo-slider__arrow"
+        aria-label="Foto anterior"
+        (click)="select(activeIndex() - 1)"
+      >
+        <span aria-hidden="true">←</span>
+      </button>
+      <div class="photo-slider__position">
+        <p class="sr-only" aria-live="polite" aria-atomic="true">
+          Foto {{ activeIndex() + 1 }} de {{ images().length }}
+        </p>
+        <div class="photo-slider__dots" aria-label="Elegir foto">
+          @for (photo of images(); track photo.src; let index = $index) {
+            <button
+              type="button"
+              [attr.aria-label]="'Ver foto ' + (index + 1)"
+              [attr.aria-current]="index === activeIndex() ? 'true' : null"
+              (click)="select(index)"
+            >
+              <span></span>
+            </button>
+          }
+        </div>
+      </div>
+      <button
+        type="button"
+        class="photo-slider__arrow"
+        aria-label="Foto siguiente"
+        (click)="select(activeIndex() + 1)"
+      >
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </section>
+}

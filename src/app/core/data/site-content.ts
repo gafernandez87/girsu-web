@@ -1,5 +1,6 @@
 import {
   DownloadItem,
+  GalleryImage,
   LibraryGroup,
   NavigationItem,
   ResourceItem,
@@ -180,5 +181,32 @@ export const LIBRARY_GROUPS: readonly LibraryGroup[] = [
         format: 'PDF',
       },
     ],
+  },
+];
+
+export const WORKSHOP_PHOTOS: readonly GalleryImage[] = [
+  {
+    src: 'assets/workshops/taller-1.jpg',
+    alt: 'Afiche de trabajo colectivo con propuestas sobre comunicación y educación ambiental.',
+  },
+  {
+    src: 'assets/workshops/taller-2.jpg',
+    alt: 'Participantes trabajando en grupos con afiches y notas adhesivas en una biblioteca.',
+  },
+  {
+    src: 'assets/workshops/taller-3.jpg',
+    alt: 'Participantes mostrando el afiche elaborado durante el taller.',
+  },
+  {
+    src: 'assets/workshops/taller-4.jpg',
+    alt: 'Presentación del objetivo de la Estrategia de Educación Ambiental para GIRSU.',
+  },
+  {
+    src: 'assets/workshops/taller-5.jpg',
+    alt: 'Exposición de la Estrategia Provincial de Educación Ambiental GIRSU.',
+  },
+  {
+    src: 'assets/workshops/taller-6.jpg',
+    alt: 'Intercambio de propuestas entre participantes y facilitadoras del taller.',
   },
 ];
